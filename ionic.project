@@ -1,0 +1,22 @@
+{
+  "name": "dash",
+  "app_id": "",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ],
+  "proxies": [
+    {
+      "path": "/v1/customers/cus_KWX4ykBZhhjJYk/delivery_quotes",
+      "proxyUrl": "https://api.postmates.com/v1/customers/cus_KWX4ykBZhhjJYk/delivery_quotes"
+    },
+    {
+      "path": "/v1/customers/cus_KWX4ykBZhhjJYk/deliveries",
+      "proxyUrl": "https://api.postmates.com/v1/customers/cus_KWX4ykBZhhjJYk/deliveries"
+    }
+  ]
+}

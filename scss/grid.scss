@@ -1,0 +1,32 @@
+@import "theme_variables";
+
+.grid-item {
+  width: 21%;
+  display: inline-block;
+  text-align: center;
+  margin: 5px 2% 5px 2%;
+}
+
+.grid-item p{
+  margin: 2px 0 0 0;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color: $font-gray;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.grid-pic {
+  border-radius: 3px;
+  border: 1px solid $border-gray;
+  overflow: hidden;
+  width: 90%;
+  height: 0;
+  padding-top: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  background: no-repeat center center;
+  background-size: cover;
+}

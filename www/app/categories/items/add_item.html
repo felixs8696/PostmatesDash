@@ -1,0 +1,56 @@
+<ion-view view-title="Add Item">
+  <ion-content>
+    <form ng-submit="vm.addItemToFirebase(input)">
+      <div class="list">
+        <div class="item item-divider">
+          Item
+        </div>
+        <label class="item item-input">
+          <span class="input-label">Image URL</span>
+          <input type="text" ng-model="input.image" placeholder="(optional)">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Order Number</span>
+          <input type="text" ng-model="input.optional_description" placeholder="(optional)">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Generic Name*</span>
+          <input type="text" ng-model="input.name" placeholder="i.e. Food, Soap, Medicine etc.">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Name/Description*</span>
+          <input type="text" ng-model="input.description" placeholder="include brand if possible">
+        </label>
+        <div class="item item-divider">
+          Store
+        </div>
+        <label class="item item-input">
+          <span class="input-label">Store Name*</span>
+          <input type="text" ng-model="input.pickup_name">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Corporation Name</span>
+          <input type="text" ng-model="input.pickup_business_name" placeholder="(optional)">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Address*</span>
+          <input type="text" ng-model="input.pickup_address">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Phone Number*</span>
+          <input type="text" ng-model="input.pickup_phone">
+        </label>
+        <div class="item item-divider">
+          Postmates
+        </div>
+        <label class="item item-input">
+          <span class="input-label">Pickup Instructions</span>
+          <input type="text" ng-model="input.pickup_notes" placeholder="i.e. Ask for Sally">
+        </label>
+        <label class="item">
+          <button class="button button-block button-positive" type="submit">Add Item</button>
+        </label>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

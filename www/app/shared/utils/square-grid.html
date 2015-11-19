@@ -1,0 +1,6 @@
+<div class="padding">
+    <div class="grid-item" ng-repeat="item in itemList" ng-click=item.action(item.id)>
+        <div class="grid-pic" style="background-image:url('{{item.src}}')"></div>
+        <p class="grid-text">{{item.name}}</p>
+    </div>
+</div>

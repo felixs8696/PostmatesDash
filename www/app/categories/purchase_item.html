@@ -1,0 +1,18 @@
+<ion-view view-title="Purchase Item">
+  <ion-content>
+    <div class="list">
+      <div class="item item-divider">
+        Estimated Cost: ${{(vm.item_fee / 100).toFixed(2)}}
+      </div>
+      <div class="item item-divider">
+        Estimated Delivery Time: {{vm.delivery_time}} minute(s)
+      </div>
+      <label class="item">
+        <button class="button button-block button-positive" ng-click="vm.purchase(vm.item_id)"type="submit">Purchase</button>
+      </label>
+      <label class="item">
+        <button class="button button-block button-assertive" ng-click="vm.remove_item(vm.item_id)"type="submit">Delete Item</button>
+      </label>
+    </div>
+  </ion-content>
+</ion-view>

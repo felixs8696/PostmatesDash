@@ -1,0 +1,13 @@
+<ion-view title="Categories" hide-back-button="true">
+  <ion-content ng-init="vm.loadCategories()">
+    <div class="list">
+      <div class="item category-item" ng-repeat="category in vm.categories" ui-sref="app.items({category: '{{category.id}}'})">
+        {{category.name}}
+        <div class="category-pic" style="background-image:url('{{category.src}}')"></div>
+      </div>
+      <div class="item" ng-click="vm.addCategory()">
+        <i class="ion-plus-round">        Add Category</i>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,64 @@
+@import "theme_variables";
+
+.category-item-container {
+  display: block;
+  width: 100%;
+  height: 100px;
+}
+
+.category-item-background {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 20px 0 10px 0;
+  background: no-repeat center center;
+  background-size: cover;
+  position: relative;
+  z-index: -2;
+}
+
+.category-item-background .overlay-box {
+  padding: 10% 0 10% 0;
+  background: no-repeat center center rgba(black, .5);
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.category-name {
+  padding-top: 50px;
+  -ms-transform: translate(0, -50%); /* IE 9 */
+  -webkit-transform: translate(0, -50%); /* Safari */
+  transform: translate(0, -50%);
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  font-size: 24px;
+  color: white;
+  text-shadow: rgba(black, .5);
+}
+
+//.category-item {
+//  padding: 5px 16px 5px 16px;
+//}
+
+.category-pic {
+  border-radius: 3px;
+  border: 1px solid $border-gray;
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+  background: no-repeat center center;
+  background-size: cover;
+  display: inline-block;
+  right: 16px;
+  position: absolute;
+  -ms-transform: translate(0, -8px); /* IE 9 */
+  -webkit-transform: translate(0, -8px); /* Safari */
+  transform: translate(0, -8px);
+}
+

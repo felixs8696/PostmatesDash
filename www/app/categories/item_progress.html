@@ -1,0 +1,28 @@
+<ion-view view-title="Delivery Progress" animation="no-animation" hide-back-button="true">
+  <ion-content>
+    <div class="list">
+      <div class="item item-divider">
+        Fee: ${{(vm.item_fee / 100).toFixed(2)}}
+      </div>
+      <div class="item item-divider">
+        Dropoff ETA: {{vm.delivery_time.substring(11,19)}}
+      </div>
+      <div class="item item-divider">
+        Status: {{vm.status}}
+      </div>
+      <div class="item item-divider">
+        <img src="{{vm.courier_img}}"/>
+      </div>
+      <div class="item item-divider">
+        Courier Name: {{vm.courier_name}}
+      </div>
+      <div class="item item-divider">
+        Courier phone_number: {{vm.courier_phone}}
+      </div>
+      <button class="button button-block" ng-click="vm.confirmOrder(vm.item_id)"type="submit">Confirm Delivery</button>
+      <button class="button button-block" ng-click="vm.backToItems()" type="submit">Back To Categories</button>
+      <button class="button button-block button-positive" ng-if="vm.status != 'delivered'" ng-click="vm.returnOrder(vm.item_id)"type="submit">Return Item</button>
+      <button class="button button-block button-assertive" ng-if="vm.status == 'pending' || vm.status == 'pickup'" ng-click="vm.cancelOrder(vm.item_id)"type="submit">Cancel Order</button>
+    </div>
+  </ion-content>
+</ion-view>

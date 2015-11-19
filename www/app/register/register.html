@@ -1,0 +1,47 @@
+<ion-view view-title="Register New Account" hide-back-button="true">
+  <ion-content>
+    <form ng-submit="vm.registerUser(input)">
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Username</span>
+          <input type="text" ng-model="input.username">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Full Name</span>
+          <input type="text" ng-model="input.name">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Business Name</span>
+          <input type="text" ng-model="input.business" placeholder="(optional)">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Phone Number</span>
+          <input type="text" ng-model="input.phone" placeholder="###-###-####">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Full Address</span>
+          <input type="text" ng-model="input.address">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Email</span>
+          <input type="text" ng-model="input.email">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Password</span>
+          <input type="password" ng-model="input.password">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Profile Picture*</span>
+          <input type="text" ng-model="input.profile" placeholder="must be valid url">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Cover Photo*</span>
+          <input type="text" ng-model="input.cover" placeholder="must be valid url">
+        </label>
+        <label class="item">
+          <button class="button button-block button-positive" type="submit">Register</button>
+        </label>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

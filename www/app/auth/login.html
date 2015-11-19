@@ -1,0 +1,22 @@
+<ion-view view-title="Login" hide-back-button="true">
+  <ion-content>
+    <form ng-submit="vm.userLogin(input)">
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Email</span>
+          <input type="text" ng-model="input.email">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Password</span>
+          <input type="password" ng-model="input.password">
+        </label>
+        <label class="item">
+          <button class="button button-block button-positive" type="submit">Log in</button>
+        </label>
+        <label class="item">
+          <button class="button button-block button-calm" ui-sref="app.register">Register New Account</button>
+        </label>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

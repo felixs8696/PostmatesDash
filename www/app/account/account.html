@@ -1,0 +1,49 @@
+<ion-view view-title="{{vm.user_firstname}}'s Profile" hide-back-button="true" ng-init="vm.createAcctInfoObj(); vm.setProPic(); vm.setCoverPhoto()">
+    <ion-content>
+        <div class="profile-display-container">
+            <div class="profile-background" style="background-image:url('{{vm.pro_background || '././img/blank_cover.jpg'}}')">
+                <div class="profile-pic-container" style="background-image:url('{{vm.pro_pic || '././img/blank_avatar.png'}}')"></div>
+                <div class="overlay-box"></div>
+                <p class="name-title white-name">Felix Su</p>
+            </div>
+        </div>
+
+        <div class="padding">
+          <div class="about-gray" ng-repeat="(key, value) in vm.acctInfoObj track by $index" ng-if="value.info">
+            <div class="item item-divider">
+              {{value.section}}
+            </div>
+            <div class="item">
+              <p id="{{value.section}}">{{value.info}}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="padding">
+          <div class="item item-divider">
+            Update Delivery Note (Optional)
+          </div>
+          <div class="item">
+            <textarea class="delivery-note" placeholder="Instructions for delivery service..." ng-model="input"></textarea>
+            <button class="button button-block button-positive" ng-click="vm.updateNote(input)">Update Note</button>
+          </div>
+
+          <form ng-submit="vm.updatePhotos(input)">
+            <div class="list">
+              <label class="item item-input">
+                <span class="input-label">Update Profile Picture</span>
+                <input type="text" ng-model="input.profileUpdate" placeholder="must be valid url">
+              </label>
+              <label class="item item-input">
+                <span class="input-label">Update Cover Photo*</span>
+                <input type="text" ng-model="input.coverUpdate" placeholder="must be valid url">
+              </label>
+              <label class="item">
+                <button class="button button-block button-positive" type="submit">Update Photos</button>
+              </label>
+            </div>
+          </form>
+        </div>
+
+    </ion-content>
+</ion-view>
